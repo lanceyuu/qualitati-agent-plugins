@@ -8,7 +8,7 @@
       "name": "qualitati",
       "source": {
         "source": "local",
-        "path": "./plugins/qualitati"
+        "path": "./"
       },
       "policy": {
         "installation": "AVAILABLE",

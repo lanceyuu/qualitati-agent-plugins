@@ -109,14 +109,15 @@ A human participant still conducts the interview via the share link; the agent s
 One plugin, two package layouts, shared skills:
 
 ```
-.claude-plugin/marketplace.json     Claude Code marketplace (this repo)
-.agents/plugins/marketplace.json    Codex marketplace (this repo)
-plugins/qualitati/
-  .claude-plugin/plugin.json  .mcp.json      Claude Code
-  plugin.json  mcp.json                      Codex / Agent Plugins
-  skills/  commands/  assets/                shared
+.claude-plugin/marketplace.json     Claude Code marketplace (this repo, plugin source "./")
+.claude-plugin/plugin.json          Claude Code plugin manifest
+.agents/plugins/marketplace.json    Codex marketplace (this repo, plugin path "./")
+plugin.json  mcp.json               Codex / Agent Plugins (Open Plugins) manifest + MCP config
+.mcp.json                           Claude Code MCP config
+skills/  commands/  assets/         shared
 server.json                         MCP Registry entry
 ```
+The repo root *is* the plugin (the Open Plugins layout cursor.directory scans), and the two marketplace files let Claude Code and Codex install it from the same repo.
 
 ## License
 

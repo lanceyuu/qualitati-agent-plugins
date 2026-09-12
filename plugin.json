@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "qualitati",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Run AI-moderated interviews, conversational surveys and qualitative analysis on QualiTaTi from your AI agent.",
   "author": {
     "name": "QualiTaTi",
