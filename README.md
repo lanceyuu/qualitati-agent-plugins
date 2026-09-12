@@ -30,7 +30,7 @@ claude mcp add --transport http qualitati https://starfish-app-73rfk.ondigitaloc
 
 ```
 codex plugin marketplace add lanceyuu/qualitati-agent-plugins
-codex plugin add qualitati
+codex plugin add qualitati@qualitati-agent-plugins
 ```
 
 Or configure the server directly in `~/.codex/config.toml`:
