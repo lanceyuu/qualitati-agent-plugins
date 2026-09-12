@@ -11,7 +11,7 @@
       "name": "qualitati",
       "source": "./plugins/qualitati",
       "description": "Run AI-moderated interviews, conversational surveys and qualitative analysis on QualiTaTi from your AI agent.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "QualiTaTi"
       },

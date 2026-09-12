@@ -10,6 +10,8 @@ One hosted [MCP](https://modelcontextprotocol.io) server does the work; this rep
 2. A personal API key: **qualitati.com → Profile → API keys** (keys start with `qt_`). The key inherits your plan, quotas and billing; revoke it there any time.
 3. Put it in your shell: `export QUALITATI_API_KEY=qt_…`
 
+Clients that implement MCP authorization (OAuth 2.1 with dynamic client registration) can skip the key entirely: point them at the server URL and a QualiTaTi consent page opens in your browser. Claude Code: `claude mcp add --transport http qualitati https://starfish-app-73rfk.ondigitalocean.app/mcp`, then `/mcp` → Authenticate.
+
 ## Install
 
 ### Claude Code

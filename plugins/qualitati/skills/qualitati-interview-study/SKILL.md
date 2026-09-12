@@ -39,13 +39,13 @@ Avoid leading or double-barrelled questions and jargon. Keep it under ~400 words
 
 ## 4. Create and hand over
 
-- Call `project_create(...)`. It returns `id`, `uuid` and `share_url`.
-- If `share_url` is empty, call `project_share(project_id=<id>)`.
-- Give the user the share link and say plainly: send it to participants; the AI conducts the interview; results appear as participants finish.
+- Call `project_create(...)`. It returns `id`, `uuid`, `share_url` (the code) and **`share_link`** (the full participant URL).
+- If `share_link` is empty, call `project_share(project_id=<id>)`; it returns `share_link` too.
+- Give the user `share_link` and say plainly: send it to participants; the AI conducts the interview; results appear as participants finish.
 
 ## 5. Follow up
 
-- Progress: `project_interviews(project_uuid)` lists interviews with `status`, `has_transcript`, `duration`, `ai_coding_status`.
+- Progress: `project_interviews(project_uuid, limit, offset)` lists interviews with `status`, `has_transcript`, `duration`, `analysis_ready` (an analysis is stored) and `quality_score`.
 - Results: switch to the **qualitati-results** skill (`analysis_summary`, `analysis_run`, `analysis_results`, `analysis_digest`, `interview_get`).
 - Existing transcripts from elsewhere: `interview_import(project_uuid, interviews=[{interviewee, conversation: [{role, content}, ...], duration_s}])` — idempotent when you pass `interview_uuid`.
 

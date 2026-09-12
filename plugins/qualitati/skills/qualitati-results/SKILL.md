@@ -14,14 +14,14 @@ Tools: `project_list`, `project_interviews`, `analysis_summary`, `analysis_resul
 
 ## 2. See what exists
 
-- `project_interviews(project_uuid)` → each interview's `uuid`, `status`, `has_transcript`, `duration`, `ai_coding_status`, `quality_score`.
-- `analysis_summary(project_uuid)` → total vs coded counts.
+- `project_interviews(project_uuid, limit, offset)` → each interview's `uuid`, `status`, `has_transcript`, `duration`, `analysis_ready`, `quality_score`.
+- `analysis_summary(project_uuid)` → `total` vs `coded` (interviews with a stored analysis).
 Report the state honestly: e.g. "7 interviews, 5 completed, 3 analysed".
 
 ## 3. Get the analysis
 
 For each **completed** interview:
-- `analysis_results(interview_uuid)` → stored quality + coding (themes/codes). If it says nothing has been computed yet:
+- `analysis_results(interview_uuid)` → stored quality + coding (themes/codes) under `data`. If `analysis_ready` is false or it says nothing has been computed yet:
   - `analysis_run(interview_uuid, mode="complete")` (quality + coding) or `mode="coding"` (themes only). This spends the owner's credits and is rate-limited (~5 runs/minute): ask before running it on more than a handful, and never re-run what already exists.
 - `analysis_digest(interview_uuid)` → keywords / summary / insight, when stored.
 - `interview_get(interview_uuid)` → metadata + the full conversation, for verbatim quotes.
