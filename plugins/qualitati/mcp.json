@@ -1,0 +1,10 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "qualitati": {
+      "type": "streamable-http",
+      "url": "https://starfish-app-73rfk.ondigitalocean.app/mcp",
+      "bearer_token_env_var": "QUALITATI_API_KEY"
+    }
+  }
+}

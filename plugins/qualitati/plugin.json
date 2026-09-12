@@ -1,0 +1,45 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "qualitati",
+  "version": "1.0.0",
+  "description": "Run AI-moderated interviews, conversational surveys and qualitative analysis on QualiTaTi from your AI agent.",
+  "author": {
+    "name": "QualiTaTi",
+    "email": "contact@qualitati.com",
+    "url": "https://qualitati.com"
+  },
+  "homepage": "https://qualitati.com/developers",
+  "repository": "https://github.com/lanceyuu/qualitati-agent-plugins",
+  "license": "MIT",
+  "keywords": [
+    "qualitative-research",
+    "interviews",
+    "surveys",
+    "thematic-analysis",
+    "user-research",
+    "mcp",
+    "qualitati"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "QualiTaTi",
+        "shortDescription": "Run AI-moderated interviews, conversational surveys and qualitative analysis on QualiTaTi from your AI agent.",
+        "longDescription": "QualiTaTi is an AI-powered qualitative research platform. This plugin connects your agent to the hosted QualiTaTi MCP server so it can create AI-interview studies and surveys, hand out participant links, read transcripts, run coding and quality analysis, and summarise results \u2014 with the same API key, permissions and billing as your QualiTaTi account.",
+        "developerName": "QualiTaTi",
+        "category": "Research",
+        "capabilities": [
+          "Read",
+          "Write"
+        ],
+        "defaultPrompt": [
+          "Set up a semi-structured interview study on QualiTaTi about onboarding friction and give me the participant link.",
+          "Summarise the themes across the completed interviews in my QualiTaTi project."
+        ],
+        "brandColor": "#0D9488",
+        "composerIcon": "./assets/logo.png",
+        "logo": "./assets/logo.png"
+      }
+    }
+  }
+}

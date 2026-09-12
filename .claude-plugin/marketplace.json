@@ -1,0 +1,30 @@
+{
+  "name": "qualitati-agent-plugins",
+  "owner": {
+    "name": "QualiTaTi",
+    "email": "contact@qualitati.com",
+    "url": "https://qualitati.com"
+  },
+  "description": "QualiTaTi for AI agents: AI-moderated interviews, conversational surveys and qualitative analysis from Claude Code, Codex and any MCP client.",
+  "plugins": [
+    {
+      "name": "qualitati",
+      "source": "./plugins/qualitati",
+      "description": "Run AI-moderated interviews, conversational surveys and qualitative analysis on QualiTaTi from your AI agent.",
+      "version": "1.0.0",
+      "author": {
+        "name": "QualiTaTi"
+      },
+      "homepage": "https://qualitati.com/developers",
+      "keywords": [
+        "qualitative-research",
+        "interviews",
+        "surveys",
+        "thematic-analysis",
+        "user-research",
+        "mcp",
+        "qualitati"
+      ]
+    }
+  ]
+}

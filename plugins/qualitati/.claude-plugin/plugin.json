@@ -1,0 +1,22 @@
+{
+  "name": "qualitati",
+  "version": "1.0.0",
+  "description": "Run AI-moderated interviews, conversational surveys and qualitative analysis on QualiTaTi from your AI agent.",
+  "author": {
+    "name": "QualiTaTi",
+    "email": "contact@qualitati.com",
+    "url": "https://qualitati.com"
+  },
+  "homepage": "https://qualitati.com/developers",
+  "repository": "https://github.com/lanceyuu/qualitati-agent-plugins",
+  "license": "MIT",
+  "keywords": [
+    "qualitative-research",
+    "interviews",
+    "surveys",
+    "thematic-analysis",
+    "user-research",
+    "mcp",
+    "qualitati"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "qualitati-agent-plugins",
+  "interface": {
+    "displayName": "QualiTaTi Agent Plugins"
+  },
+  "plugins": [
+    {
+      "name": "qualitati",
+      "source": {
+        "source": "local",
+        "path": "./plugins/qualitati"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research"
+    }
+  ]
+}
