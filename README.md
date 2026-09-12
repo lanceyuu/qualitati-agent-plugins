@@ -10,7 +10,7 @@ One hosted [MCP](https://modelcontextprotocol.io) server does the work; this rep
 2. A personal API key: **qualitati.com → Profile → API keys** (keys start with `qt_`). The key inherits your plan, quotas and billing; revoke it there any time.
 3. Put it in your shell: `export QUALITATI_API_KEY=qt_…`
 
-Clients that implement MCP authorization (OAuth 2.1 with dynamic client registration) can skip the key entirely: point them at the server URL and a QualiTaTi consent page opens in your browser. Claude Code: `claude mcp add --transport http qualitati https://starfish-app-73rfk.ondigitalocean.app/mcp`, then `/mcp` → Authenticate.
+Clients that implement MCP authorization (OAuth 2.1 with dynamic client registration) can skip the key entirely: point them at the server URL and a QualiTaTi consent page opens in your browser. Claude Code: `claude mcp add --transport http qualitati https://api.qualitati.com/mcp`, then `/mcp` → Authenticate.
 
 ## Install
 
@@ -24,7 +24,7 @@ Clients that implement MCP authorization (OAuth 2.1 with dynamic client registra
 You get the `qualitati` MCP server (reads `QUALITATI_API_KEY`), the skills, and `/qualitati:new-study` and `/qualitati:results`. Without the plugin, the server alone:
 
 ```
-claude mcp add --transport http qualitati https://starfish-app-73rfk.ondigitalocean.app/mcp \
+claude mcp add --transport http qualitati https://api.qualitati.com/mcp \
   --header "Authorization: Bearer $QUALITATI_API_KEY"
 ```
 
@@ -39,7 +39,7 @@ Or configure the server directly in `~/.codex/config.toml`:
 
 ```toml
 [mcp_servers.qualitati]
-url = "https://starfish-app-73rfk.ondigitalocean.app/mcp"
+url = "https://api.qualitati.com/mcp"
 bearer_token_env_var = "QUALITATI_API_KEY"
 ```
 
@@ -50,7 +50,7 @@ bearer_token_env_var = "QUALITATI_API_KEY"
   "mcp": {
     "qualitati": {
       "type": "remote",
-      "url": "https://starfish-app-73rfk.ondigitalocean.app/mcp",
+      "url": "https://api.qualitati.com/mcp",
       "enabled": true,
       "headers": { "Authorization": "Bearer {env:QUALITATI_API_KEY}" }
     }
@@ -66,7 +66,7 @@ bearer_token_env_var = "QUALITATI_API_KEY"
 {
   "mcpServers": {
     "qualitati": {
-      "url": "https://starfish-app-73rfk.ondigitalocean.app/mcp",
+      "url": "https://api.qualitati.com/mcp",
       "headers": { "Authorization": "Bearer qt_your_key_here" }
     }
   }
@@ -82,7 +82,7 @@ Custom connectors cannot send a fixed header yet, so bridge with `mcp-remote` in
   "mcpServers": {
     "qualitati": {
       "command": "npx",
-      "args": ["-y", "mcp-remote", "https://starfish-app-73rfk.ondigitalocean.app/mcp",
+      "args": ["-y", "mcp-remote", "https://api.qualitati.com/mcp",
                "--header", "Authorization: Bearer qt_your_key_here"]
     }
   }

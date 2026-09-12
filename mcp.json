@@ -3,7 +3,7 @@
   "mcpServers": {
     "qualitati": {
       "type": "streamable-http",
-      "url": "https://starfish-app-73rfk.ondigitalocean.app/mcp",
+      "url": "https://api.qualitati.com/mcp",
       "bearer_token_env_var": "QUALITATI_API_KEY"
     }
   }

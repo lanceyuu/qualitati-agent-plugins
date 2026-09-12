@@ -7,12 +7,12 @@
     "url": "https://github.com/lanceyuu/qualitati-agent-plugins",
     "source": "github"
   },
-  "version": "1.0.1",
+  "version": "1.0.2",
   "websiteUrl": "https://qualitati.com/developers",
   "remotes": [
     {
       "type": "streamable-http",
-      "url": "https://starfish-app-73rfk.ondigitalocean.app/mcp",
+      "url": "https://api.qualitati.com/mcp",
       "headers": [
         {
           "name": "Authorization",
