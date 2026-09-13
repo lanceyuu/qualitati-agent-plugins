@@ -112,6 +112,7 @@ One plugin, two package layouts, shared skills:
 .claude-plugin/marketplace.json     Claude Code marketplace (this repo, plugin source "./")
 .claude-plugin/plugin.json          Claude Code plugin manifest
 .agents/plugins/marketplace.json    Codex marketplace (this repo, plugin path "./")
+.codex-plugin/plugin.json           Codex plugin manifest (mcpServers -> ./mcp.json, so Codex reads the bearer_token_env_var form)
 plugin.json  mcp.json               Codex / Agent Plugins (Open Plugins) manifest + MCP config
 .mcp.json                           Claude Code MCP config
 skills/  commands/  assets/         shared

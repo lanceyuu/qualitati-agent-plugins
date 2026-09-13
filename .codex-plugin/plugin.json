@@ -18,5 +18,6 @@
     "user-research",
     "mcp",
     "qualitati"
-  ]
+  ],
+  "mcpServers": "./mcp.json"
 }
